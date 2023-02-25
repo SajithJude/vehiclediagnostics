@@ -27,8 +27,8 @@ def main():
     # Define the sidebar content
     st.sidebar.image(profile_image, use_column_width=True)
     st.sidebar.title("Senal Kariyawasam")
-    # st.sidebar.write("Final Year Undergraduate")
-    # st.sidebar.write("IIT (University of Westminster)")
+    st.sidebar.write("Final Year Undergraduate")
+    st.sidebar.write("IIT (University of Westminster)")
     cola, colb = st.columns(2, gap="medium")
     # st.set_column_spacing(50)
 
@@ -83,6 +83,8 @@ def main():
 
 if __name__ == "__main__":
     st.title("Vehicle Engine Failure Prediction")
+    st.markdown("#This Platform is the UI implementation made by selecting the highest performing Machine learning Model which is the Random forest Classifier")
+    st.markdown("<a href='https://colab.research.google.com/drive/1ixgyBAmz8984B4N7YW1xVWuT1aESArlW?usp=sharing' target='_blank'>Click this link to access Colab notebook implementation of selecting the best model</a>", unsafe_allow_html=True)
 
     df= pd.read_csv("senal dataset - Sheet1 (1).csv")
     X = df[['year', 'manufacturer','Coldstart_rpm','heated_rpm','engine_temp']]
