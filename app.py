@@ -28,7 +28,7 @@ def predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_
     data = [[sepal_length, sepal_width, petal_length, petal_width,heated_rpm]]
     prediction = model.predict(data)
     # species = [prediction[0]
-    return prediction
+    return prediction[0]
 
 # Create the Streamlit app
 def main():
