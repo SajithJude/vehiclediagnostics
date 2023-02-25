@@ -41,7 +41,7 @@ model.fit(X_train, y_train)
 def predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm):
     data = [[sepal_length, sepal_width, petal_length, petal_width,heated_rpm]]
     prediction = model.predict(data)
-    st.write( prediction)
+    # st.write( prediction)
     return prediction[0]
 
 # Create the Streamlit app
@@ -80,10 +80,10 @@ def main():
     st.write("ET :"+ str(petal_width))
 
     # Make predictions and display the results
-    if st.button("Predict"):
+    # if st.button("Predict"):
         
-      species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
-      st.write("The Knock sensor health is :", species)
+    species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
+    st.write("The Knock sensor health is :", species)
 
 if __name__ == "__main__":
     main()
