@@ -72,9 +72,12 @@ def main():
     arr = ["Engine performance issues: A faulty knock sensor may cause the engine to misfire, hesitate, or run roughly. This is because the engine control module (ECM) uses the knock sensor signal to adjust the ignition timing and fuel delivery to prevent knocking or pinging.","Reduced fuel economy: A degraded knock sensor may cause the engine to operate less efficiently, resulting in reduced fuel economy.","Illuminated check engine light: A malfunctioning knock sensor can trigger the check engine light to come on. This is because the ECM relies on the knock sensor signal to detect engine knock and adjust the engine's operating parameters."," Knocking or pinging sounds: A failed knock sensor may not detect engine knock, leading to audible knocking or pinging sounds from the engine. However, it's worth noting that these sounds can also be caused by other issues, such as a damaged piston or a malfunctioning fuel injector"]
     # Make predictions and display the results
     # if st.button("Predict"):
-        
+    sol = ["Replace the knock sensor: The most common solution to a faulty knock sensor is to replace it with a new one. This is a relatively simple repair that can be done by a mechanic or experienced DIYer. Make sure to use a high-quality replacement sensor to ensure proper function", "Check for damaged wiring: Sometimes the problem may not be the sensor itself, but damaged wiring leading to the sensor. Check for any frayed, corroded, or broken wires, and repair or replace them as needed.","Check the engine control module (ECM): In some cases, a faulty ECM may be causing issues with the knock sensor signal. If you've ruled out the knock sensor and wiring, it may be worth having a professional mechanic diagnose the issue with the ECM.","Clean the engine: A buildup of carbon deposits on the engine can sometimes cause issues with knock sensor signals. A thorough engine cleaning may help to resolve the problem.","Check the fuel quality: Poor quality fuel can sometimes cause engine knock and damage the knock sensor. Make sure to use high-quality fuel with the proper octane rating for your vehicle."]
     species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
     st.write( arr[species])
+
+    with st.beta_expander("What should I do Next ?"):
+    st.write(sol[species])
 
 if __name__ == "__main__":
     st.title("Vehicle Engine Failure Prediction")
