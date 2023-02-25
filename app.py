@@ -72,7 +72,7 @@ def main():
     colb.header("The predicted issue is:")
     colb.write(pred[species])
 
-    with st.beta_expander("Reason for issue")
+    with st.beta_expander("Reason for issue"):
       st.write( arr[species])
 
     with st.beta_expander("How to Fix this issue"):
