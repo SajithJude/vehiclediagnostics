@@ -55,7 +55,7 @@ def main():
     value=(2010),
     step=1)
 
-    sepal_width = st.sidebar.slider("Manufacturer", 1,2)
+    sepal_width = st.sidebar.slider("Manufacturer", 1,2,3)
     petal_length = st.sidebar.slider("Cold Start RPM", min_value=1000,
     max_value=1400,
     value=(1000),
@@ -70,8 +70,10 @@ def main():
     step=1)
 
     # Make predictions and display the results
-    species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
-    st.write("The Knock sensor health is :", species)
+    if st.button("Predict"):
+        
+      species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
+      st.write("The Knock sensor health is :", species)
 
 if __name__ == "__main__":
     main()
