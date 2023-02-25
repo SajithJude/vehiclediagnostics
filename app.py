@@ -30,6 +30,7 @@ def main():
     # st.sidebar.write("Final Year Undergraduate")
     # st.sidebar.write("IIT (University of Westminster)")
     cola, colb = st.columns(2)
+    st.set_column_spacing(50)
 
     # Define the user input widgets
     sepal_length = cola.slider("Year", min_value=2008,
