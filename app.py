@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from PIL import Image
 
-st.set_page_config(page_title=apptitle, page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Senal-K", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
 
 # Set dark theme
 st.markdown(
