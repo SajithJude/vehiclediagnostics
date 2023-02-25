@@ -36,27 +36,27 @@ def predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_
 # Create the Streamlit app
 def main():
   
-    st.sidebar.header("User Input Parameters")
+    st.header("User Input Parameters")
 
     # Define the user input widgets
-    sepal_length = st.sidebar.slider("Year", min_value=2008,
+    sepal_length = st.slider("Year", min_value=2008,
     max_value=2022,
     value=(2010),
     step=1)
 
-    sepal_width = st.sidebar.slider("Manufacturer",  min_value=1,
+    sepal_width = st.slider("Manufacturer",  min_value=1,
     max_value=5,
     value=(2),
     step=1)
-    petal_length = st.sidebar.slider("Cold Start RPM", min_value=1000,
+    petal_length = st.slider("Cold Start RPM", min_value=1000,
     max_value=1500,
     value=(1000),
     step=1)
-    heated_rpm = st.sidebar.slider("Heated RPM", min_value=1500,
+    heated_rpm = st.slider("Heated RPM", min_value=1500,
     max_value=6000,
     value=(2010),
     step=1)
-    petal_width = st.sidebar.slider("Engine Temperature", min_value=190,
+    petal_width = st.slider("Engine Temperature", min_value=190,
     max_value=225,
     value=(200),
     step=1)
