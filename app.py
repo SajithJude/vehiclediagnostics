@@ -55,7 +55,7 @@ def main():
     value=(2010),
     step=1)
 
-    sepal_width = st.sidebar.slider("Manufacturer", 1.0,2.0,3.0,4.0,5.0)
+    sepal_width = st.sidebar.slider("Manufacturer", 1,2)
     petal_length = st.sidebar.slider("Cold Start RPM", min_value=1000,
     max_value=1400,
     value=(1000),
