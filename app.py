@@ -25,7 +25,7 @@ model.fit(X_train, y_train)
 
 # Define the prediction function
 def predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm):
-    data = [[sepal_length, sepal_width, petal_length, petal_width]]
+    data = [[sepal_length, sepal_width, petal_length, petal_width,heated_rpm]]
     prediction = model.predict(data)
     species = iris.target_names[prediction[0]]
     return species
