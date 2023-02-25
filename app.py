@@ -55,19 +55,29 @@ def main():
     value=(2010),
     step=1)
 
-    sepal_width = st.sidebar.slider("Manufacturer", 1,2,3)
+    sepal_width = st.sidebar.slider("Manufacturer",  min_value=1,
+    max_value=5,
+    value=(2),
+    step=1)
     petal_length = st.sidebar.slider("Cold Start RPM", min_value=1000,
-    max_value=1400,
+    max_value=1500,
     value=(1000),
     step=1)
-    heated_rpm = st.sidebar.slider("Heated RPM", min_value=2000,
-    max_value=3000,
+    heated_rpm = st.sidebar.slider("Heated RPM", min_value=1500,
+    max_value=6000,
     value=(2010),
     step=1)
     petal_width = st.sidebar.slider("Engine Temperature", min_value=190,
-    max_value=260,
+    max_value=225,
     value=(200),
     step=1)
+
+
+    st.write("Year :"+ sepal_length)
+    st.write("Manufactuer :"+ sepal_width)
+    st.write("Cold Start RPM :"+ petal_length)
+    st.write("Heated RPM :"+ heated_rpm)
+    st.write("ET :"+ petal_width)
 
     # Make predictions and display the results
     if st.button("Predict"):
