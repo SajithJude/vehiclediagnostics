@@ -63,7 +63,7 @@ def main():
     # # if st.button("Predict"):
         
     species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
-    st.write("The issue is due to :", arr[species])
+    st.write("The issue is due to :", str(arr[species]))
 
 if __name__ == "__main__":
     df= pd.read_csv("senal dataset - Sheet1 (1).csv")
