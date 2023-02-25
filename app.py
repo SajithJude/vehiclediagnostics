@@ -45,16 +45,16 @@ def main():
     max_value=1500,
     value=(1000),
     step=1)
-    heated_rpm = colb.slider("Heated RPM", min_value=1500,
+    heated_rpm = cola.slider("Heated RPM", min_value=1500,
     max_value=6000,
     value=(2010),
     step=1)
-    petal_width = colb.slider("Engine Temperature", min_value=190,
+    petal_width = cola.slider("Engine Temperature", min_value=190,
     max_value=225,
     value=(200),
     step=1)
     man =["Toyota ","Renault","Hyundai","Mercedes","Audi"]
-    colb.header("Input parameters Summary")
+    colb.header("Parameters Summary")
     colb.write("Model Manufactured Year :"+ str(sepal_length))
     colb.write("Manufactuerd Company :"+ str(man[sepal_width]))
     colb.write("Cold Start RPM :"+ str(petal_length))
