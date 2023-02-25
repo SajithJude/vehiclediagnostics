@@ -61,18 +61,20 @@ def main():
     value=(200),
     step=1)
 
-
+    st.header("Based On the following parameters bellow:")
     st.write("Year :"+ str(sepal_length))
     st.write("Manufactuer :"+ str(sepal_width))
     st.write("Cold Start RPM :"+ str(petal_length))
     st.write("Heated RPM :"+ str(heated_rpm))
     st.write("ET :"+ str(petal_width))
+    st.header("The predicted issue is:")
+
     arr = ["Engine performance issues: A faulty knock sensor may cause the engine to misfire, hesitate, or run roughly. This is because the engine control module (ECM) uses the knock sensor signal to adjust the ignition timing and fuel delivery to prevent knocking or pinging.","Reduced fuel economy: A degraded knock sensor may cause the engine to operate less efficiently, resulting in reduced fuel economy.","Illuminated check engine light: A malfunctioning knock sensor can trigger the check engine light to come on. This is because the ECM relies on the knock sensor signal to detect engine knock and adjust the engine's operating parameters."," Knocking or pinging sounds: A failed knock sensor may not detect engine knock, leading to audible knocking or pinging sounds from the engine. However, it's worth noting that these sounds can also be caused by other issues, such as a damaged piston or a malfunctioning fuel injector"]
     # Make predictions and display the results
     # if st.button("Predict"):
         
     species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
-    st.write("The issue is due to :", arr[species])
+    st.write( arr[species])
 
 if __name__ == "__main__":
     st.title("Vehicle Engine Failure Prediction")
