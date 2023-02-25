@@ -72,13 +72,13 @@ def main():
     colb.header("Model Prediction:")
     colb.write(pred[species])
 
-    with st.beta_expander("Reason for issue"):
+    with st.beta_expander("Reason for issue (click to expand)"):
       st.write( arr[species])
 
-    with st.beta_expander("How to Fix this issue"):
+    with st.beta_expander("How to Fix this issue (click to expand)"):
       st.write(sol[species])
 
-    with st.beta_expander("Mechanics and Parts Contact info"):
+    with st.beta_expander("Mechanics and Parts Contact info (click to expand)"):
       st.write(rep[species])
 
 if __name__ == "__main__":
