@@ -44,7 +44,7 @@ def main():
 
 
     # Make predictions and display the results
-    species = predict_species(sepal_length, sepal_width, petal_length, petal_width)
+    species = predict_species(sepal_length, sepal_width, petal_length, petal_width,heated_rpm)
     st.write("The Knock sensor health is :", species)
 
 if __name__ == "__main__":
