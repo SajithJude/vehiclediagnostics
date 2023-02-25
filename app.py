@@ -22,17 +22,6 @@ The health of a knock sensor can be affected by several factors, including norma
 # Load the iris dataset
 iris = datasets.load_iris()
 
-df= pd.read_csv("senal dataset - Sheet1 (1).csv")
-X = df[['year', 'manufacturer','Coldstart_rpm','heated_rpm','engine_temp']]
-y = df['knock_sensor']
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Train a Random Forest Classifier
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
-
-
 
 # Load the pre-trained model
 # model = pickle.load(open("model.pkl", "rb"))
@@ -86,4 +75,16 @@ def main():
     st.write("The Knock sensor health is :", species)
 
 if __name__ == "__main__":
+    df= pd.read_csv("senal dataset - Sheet1 (1).csv")
+    X = df[['year', 'manufacturer','Coldstart_rpm','heated_rpm','engine_temp']]
+    y = df['knock_sensor']
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Train a Random Forest Classifier
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+
+
+
     main()
