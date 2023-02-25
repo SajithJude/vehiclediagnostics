@@ -73,11 +73,11 @@ def main():
     step=1)
 
 
-    st.write("Year :"+ sepal_length)
-    st.write("Manufactuer :"+ sepal_width)
-    st.write("Cold Start RPM :"+ petal_length)
-    st.write("Heated RPM :"+ heated_rpm)
-    st.write("ET :"+ petal_width)
+    st.write("Year :"+ str(sepal_length))
+    st.write("Manufactuer :"+ str(sepal_width))
+    st.write("Cold Start RPM :"+ str(petal_length))
+    st.write("Heated RPM :"+ str(heated_rpm))
+    st.write("ET :"+ str(petal_width))
 
     # Make predictions and display the results
     if st.button("Predict"):
