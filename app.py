@@ -29,7 +29,7 @@ def main():
     st.sidebar.title("Senal Kariyawasam")
     # st.sidebar.write("Final Year Undergraduate")
     # st.sidebar.write("IIT (University of Westminster)")
-    cola, colb = st.columns(2)
+    cola, colb = st.columns(2, gap="medium")
     st.set_column_spacing(50)
 
     # Define the user input widgets
