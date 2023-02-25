@@ -69,7 +69,7 @@ def main():
     colb.write("Cold Start RPM :"+ str(petal_length))
     colb.write("Heated RPM :"+ str(heated_rpm))
     colb.write("Engine temperature :"+ str(petal_width)+" degree celsius")
-    colb.header("The predicted issue is:")
+    colb.header("Model Prediction:")
     colb.write(pred[species])
 
     with st.beta_expander("Reason for issue"):
