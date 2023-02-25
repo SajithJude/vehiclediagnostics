@@ -29,38 +29,38 @@ def main():
     st.sidebar.title("Senal Kariyawasam")
     # st.sidebar.write("Final Year Undergraduate")
     # st.sidebar.write("IIT (University of Westminster)")
-  
+    cola, colb = st.columns(2)
     st.header("User Input Parameters")
 
     # Define the user input widgets
-    sepal_length = st.slider("Year", min_value=2008,
+    sepal_length = cola.slider("Year", min_value=2008,
     max_value=2022,
     value=(2010),
     step=1)
 
-    sepal_width = st.slider("Manufacturer",  min_value=1,
+    sepal_width = cola.slider("Manufacturer",  min_value=1,
     max_value=5,
     value=(2),
     step=1)
-    petal_length = st.slider("Cold Start RPM", min_value=1000,
+    petal_length = cola.slider("Cold Start RPM", min_value=1000,
     max_value=1500,
     value=(1000),
     step=1)
-    heated_rpm = st.slider("Heated RPM", min_value=1500,
+    heated_rpm = cola.slider("Heated RPM", min_value=1500,
     max_value=6000,
     value=(2010),
     step=1)
-    petal_width = st.slider("Engine Temperature", min_value=190,
+    petal_width = cola.slider("Engine Temperature", min_value=190,
     max_value=225,
     value=(200),
     step=1)
     man =["Toyota ","Renault","Hyundai","Mercedes","Audi"]
-    st.header("Based On the following parameters bellow:")
-    st.write("Model Manufactured Year :"+ str(sepal_length))
-    st.write("Manufactuerd Company :"+ str(man[sepal_width]))
-    st.write("Cold Start RPM :"+ str(petal_length))
-    st.write("Heated RPM :"+ str(heated_rpm))
-    st.write("Engine temperature :"+ str(petal_width)+" degree celsius")
+    colb.header("Based On the following parameters bellow:")
+    colb.write("Model Manufactured Year :"+ str(sepal_length))
+    colb.write("Manufactuerd Company :"+ str(man[sepal_width]))
+    colb.write("Cold Start RPM :"+ str(petal_length))
+    colb.write("Heated RPM :"+ str(heated_rpm))
+    colb.write("Engine temperature :"+ str(petal_width)+" degree celsius")
     st.header("The predicted issue is:")
 
     arr = ["Engine performance issues: A faulty knock sensor may cause the engine to misfire, hesitate, or run roughly. This is because the engine control module (ECM) uses the knock sensor signal to adjust the ignition timing and fuel delivery to prevent knocking or pinging.","Reduced fuel economy: A degraded knock sensor may cause the engine to operate less efficiently, resulting in reduced fuel economy.","Illuminated check engine light: A malfunctioning knock sensor can trigger the check engine light to come on. This is because the ECM relies on the knock sensor signal to detect engine knock and adjust the engine's operating parameters."," Knocking or pinging sounds: A failed knock sensor may not detect engine knock, leading to audible knocking or pinging sounds from the engine. However, it's worth noting that these sounds can also be caused by other issues, such as a damaged piston or a malfunctioning fuel injector"]
