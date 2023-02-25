@@ -77,7 +77,7 @@ def main():
     st.write( arr[species])
 
     with st.beta_expander("What should I do Next ?"):
-    st.write(sol[species])
+      st.write(sol[species])
 
 if __name__ == "__main__":
     st.title("Vehicle Engine Failure Prediction")
