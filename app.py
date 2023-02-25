@@ -60,13 +60,13 @@ def main():
     max_value=225,
     value=(200),
     step=1)
-
+    man =["Toyota ","Renault","Hyundai","Mercedes","Audi"]
     st.header("Based On the following parameters bellow:")
-    st.write("Year :"+ str(sepal_length))
-    st.write("Manufactuer :"+ str(sepal_width))
+    st.write("Model Manufactured Year :"+ str(sepal_length))
+    st.write("Manufactuerd Company :"+ str(man[sepal_width]))
     st.write("Cold Start RPM :"+ str(petal_length))
     st.write("Heated RPM :"+ str(heated_rpm))
-    st.write("ET :"+ str(petal_width))
+    st.write("Engine temperature :"+ str(petal_width)+" degree celsius")
     st.header("The predicted issue is:")
 
     arr = ["Engine performance issues: A faulty knock sensor may cause the engine to misfire, hesitate, or run roughly. This is because the engine control module (ECM) uses the knock sensor signal to adjust the ignition timing and fuel delivery to prevent knocking or pinging.","Reduced fuel economy: A degraded knock sensor may cause the engine to operate less efficiently, resulting in reduced fuel economy.","Illuminated check engine light: A malfunctioning knock sensor can trigger the check engine light to come on. This is because the ECM relies on the knock sensor signal to detect engine knock and adjust the engine's operating parameters."," Knocking or pinging sounds: A failed knock sensor may not detect engine knock, leading to audible knocking or pinging sounds from the engine. However, it's worth noting that these sounds can also be caused by other issues, such as a damaged piston or a malfunctioning fuel injector"]
